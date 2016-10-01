@@ -1,3 +1,16 @@
+/* print_symbol_table
+ *
+ * --version 0.01
+ * --author matthew kempey
+ *
+ * <param name="id_t *idHead" meaning="id Linked List head">
+ * <param name="type_t *typeHead" meaning="type Linked List head">
+ * <param name="scope_t *scopeHead" meaning="scope Linked List head">
+ *
+ * print_symbol_table prints the symbol table for the lexical analyzer.
+ * 
+ */
+
 #include "lex.h"
 
 void print_symbol_table(id_t *idHead, type_t *typeHead, scope_t *scopeHead)
@@ -29,4 +42,3 @@ void print_symbol_table(id_t *idHead, type_t *typeHead, scope_t *scopeHead)
     } //end while
 
 } //end print_symbol_table
-/* REGION END: Lexical Analyzer Functions */
