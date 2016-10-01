@@ -10,10 +10,10 @@
 /*REGION BEGIN: Variables and Data Structures */
 
 //Linked List Declaration for ID
-typedef struct id {
-    char* idValue;
-    struct id *next;
-} id_t;
+typedef struct lexum {
+    char* lexumValue;
+    struct lexum *next;
+} lexum_t;
 
 //Linked List Declaration for Type
 typedef struct type{
@@ -31,6 +31,7 @@ typedef struct scope{
 
 /* REGION BEGIN: Lexical Analyzer Functions */
 
-void print_symbol_table(id_t *idHead, type_t *typeHead, scope_t *scopeHead);
+void print_symbol_table(lexum_t *lexumHead,
+                        type_t *typeHead, scope_t *scopeHead);
 
 /* REGION END: Lexical Analyzer Functions */

@@ -10,15 +10,16 @@
  * print_symbol_table prints the symbol table for the lexical analyzer.
  * 
  */
-
+#include "../comp.h"
 #include "lex.h"
 
-void print_symbol_table(id_t *idHead, type_t *typeHead, scope_t *scopeHead)
+
+void print_symbol_table(lexum_t *lexumHead, type_t *typeHead, scope_t *scopeHead)
 {
     //Define the current head
-    id_t    *current_id    = head;
-    type_t  *current_type  = head;
-    scope_t *current_scope = head;
+    lexum_t *current_lexum  = lexumHead;
+    type_t  *current_type   = typeHead;
+    scope_t *current_scope  = scopeHead;
 
 
     //Print format of symbol table
@@ -27,17 +28,24 @@ void print_symbol_table(id_t *idHead, type_t *typeHead, scope_t *scopeHead)
     puts("ID               |Type    | Scope ");
     puts("----------------------------------");
 
-    while (current != NULL)
+
+    //Iterate through list of lexums..only need to check one list 
+    //as they will all have the same number of items inside each list
+    //, so we save time skipping the comparison
+    while (current_lexum != NULL)
     {
         //Print values
         printf("[");
-        printf("%s\t\t", current_id->value);
-        printf("%s\t\t", current_type->value);
-        printf("%d", current_scope);
+        printf("%s\t\t", current_lexum->lexumValue);
+        printf("%s\t\t", current_type->typeValue);
+        printf("%d", current_scope->scopeValue);
 
         printf("]\n");
         //Iterate to next node in each list
-        current = current_id->next;
+        current_lexum = current_lexum->next;
+        current_type  = current_type->next;
+        current_scope = current_scope->next;
+        
 
     } //end while
 
