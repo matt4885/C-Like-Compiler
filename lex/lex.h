@@ -6,7 +6,7 @@
  * --author: matthew kempey
  *
  */
-
+#include <stdio.h>
 /*REGION BEGIN: Variables and Data Structures */
 
 //Linked List Declaration for ID
@@ -30,6 +30,11 @@ typedef struct scope{
 /*REGION END: Variables and Data Structures */
 
 /* REGION BEGIN: Lexical Analyzer Functions */
+
+
+void start_lexical_analysis(FILE* fp);
+
+char* compare_to_keyword();
 
 void print_symbol_table(lexum_t *lexumHead,
                         type_t *typeHead, scope_t *scopeHead);

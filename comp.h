@@ -21,3 +21,10 @@
 
 
 /* REGION END: General integer constants */
+
+void start_compile(char* file);
+
+
+/* REGION BEGIN: General Compiler Functions */
+
+/* REGION END: General Compiler Functions */
