@@ -20,7 +20,9 @@ void inspect_line(char line[])
 
     //Evaluates each character in the 
     for(int i = 0; i < strlen(line); i++)
+    {
         evaluate_char(line[i]);
+    }
 
     return;
 }

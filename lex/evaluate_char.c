@@ -12,104 +12,86 @@ void evaluate_char(char currentChar)
     switch (currentChar)
     {
         case 'a':
-            strcat("a", builtString);
+            strcat(builtString, "a");
             break;
         case 'b':
-
-            strcat("b", builtString);
+            strcat(builtString, "b");
             break;
         case 'c':
-
-            strcat("c", builtString);
+            strcat(builtString, "c");
             break;
         case 'd':
-            strcat("d", builtString);
+            strcat(builtString, "d");
             break;
-
         case 'e':
-            strcat("e", builtString);
+            strcat(builtString, "e");
             break;
-
         case 'f':
-            strcat("f", builtString);
+            strcat(builtString, "f");
             break;
-
         case 'g':
-            strcat("g", builtString);
+            strcat(builtString, "g");
             break;
-
         case 'h':
-            strcat("h", builtString);
+            strcat(builtString, "h");
             break;
-
         case 'i':
-            strcat("i", builtString);
+            strcat(builtString, "i");
             break;
         case 'j':
-            strcat("j", builtString);
+            strcat(builtString, "j");
             break;
-
         case 'k':
-            strcat("k", builtString);
+            strcat(builtString, "k");
             break;
-
         case 'l':
-            strcat("a", builtString);
+            strcat(builtString, "a");
             break;
-
         case 'm':
-            strcat("m", builtString);
+            strcat(builtString, "m");
             break;
-
         case 'n':
-            strcat("n", builtString);
+            strcat(builtString, "n");
             break;
-
         case 'o':
-            strcat("o", builtString);
+            strcat(builtString, "o");
             break;
-
         case 'p':
-            strcat("p", builtString);
+            strcat(builtString, "p");
             break;
-
         case 'q':
-            strcat("q", builtString);
+            strcat(builtString, "q");
             break;
-
         case 'r':
-            strcat("r", builtString);
-
+            strcat(builtString, "r");
             break;
         case 's':
-            strcat("s", builtString);
-
+            strcat(builtString, "s");
             break;
         case 't':
-            strcat("t", builtString);
-
+            strcat(builtString, "t");
             break;
         case 'u':
-            strcat("a", builtString);
-
+            strcat(builtString, "u");
             break;
         case 'v':
-            strcat("v", builtString);
+            strcat(builtString, "v");
             break;
-
         case 'w':
-            strcat("w", builtString);
+            strcat(builtString, "w");
             break;
-
         case 'x':
-            strcat("x", builtString);
+            strcat(builtString, "x");
             break;
-
         case 'y':
-            strcat("y", builtString);
+            strcat(builtString, "y");
             break;
         case 'z':
-            strcat("z", builtString);
+            strcat(builtString, "z");
+            break;
+        case ' ':
+            compare_to_keyword(builtString);
+        default:
             break;
     }
     return;
