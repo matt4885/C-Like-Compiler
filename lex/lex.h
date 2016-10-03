@@ -9,6 +9,7 @@
 #include <stdio.h>
 /*REGION BEGIN: Variables and Data Structures */
 
+char* builtString;
 //Linked List Declaration for ID
 typedef struct lexum {
     char* lexumValue;
@@ -31,6 +32,9 @@ typedef struct scope{
 
 /* REGION BEGIN: Lexical Analyzer Functions */
 
+void evaluate_char(char currentChar);
+
+void inspect_line();
 
 void start_lexical_analysis(FILE* fp);
 
@@ -40,3 +44,4 @@ void print_symbol_table(lexum_t *lexumHead,
                         type_t *typeHead, scope_t *scopeHead);
 
 /* REGION END: Lexical Analyzer Functions */
+
