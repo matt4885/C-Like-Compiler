@@ -1,5 +1,2 @@
-gcc comp.h
-gcc main.c -o compiler
-gcc lex/lex.h 
-gcc lex/print_symbol_table.c 
-
+compiler: *.c
+    gcc -o compiler *.c lex/*.c

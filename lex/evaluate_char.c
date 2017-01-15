@@ -7,90 +7,104 @@
 
 #include "lex.h"
 #include <string.h>
+
 void evaluate_char(char currentChar)
 {
+    char* output;
     switch (currentChar)
     {
         case 'a':
-            strcat(builtString, "a");
+            strncat(builtString, "a", 1);
             break;
         case 'b':
-            strcat(builtString, "b");
+            strncat(builtString, "b", 1);
             break;
         case 'c':
-            strcat(builtString, "c");
+            strncat(builtString, "c", 1);
             break;
         case 'd':
-            strcat(builtString, "d");
+            strncat(builtString, "d", 1);
             break;
         case 'e':
-            strcat(builtString, "e");
+            strncat(builtString, "e", 1);
             break;
         case 'f':
-            strcat(builtString, "f");
+            strncat(builtString, "f", 1);
             break;
         case 'g':
-            strcat(builtString, "g");
+            strncat(builtString, "g", 1);
             break;
         case 'h':
-            strcat(builtString, "h");
+            strncat(builtString, "h", 1);
             break;
         case 'i':
-            strcat(builtString, "i");
+            strncat(builtString, "i", 1);
             break;
         case 'j':
-            strcat(builtString, "j");
+            strncat(builtString, "j", 1);
             break;
         case 'k':
-            strcat(builtString, "k");
+            strncat(builtString, "k", 1);
             break;
         case 'l':
-            strcat(builtString, "a");
+            strncat(builtString, "a", 1);
             break;
         case 'm':
-            strcat(builtString, "m");
+            strncat(builtString, "m", 1);
             break;
         case 'n':
-            strcat(builtString, "n");
+            strncat(builtString, "n", 1);
             break;
         case 'o':
-            strcat(builtString, "o");
+            strncat(builtString, "o", 1);
             break;
         case 'p':
-            strcat(builtString, "p");
+            strncat(builtString, "p", 1);
             break;
         case 'q':
-            strcat(builtString, "q");
+            strncat(builtString, "q", 1);
             break;
         case 'r':
-            strcat(builtString, "r");
+            strncat(builtString, "r", 1);
             break;
         case 's':
-            strcat(builtString, "s");
+            strncat(builtString, "s", 1);
             break;
         case 't':
-            strcat(builtString, "t");
+            strncat(builtString, "t", 1);
             break;
         case 'u':
-            strcat(builtString, "u");
+            strncat(builtString, "u", 1);
             break;
         case 'v':
-            strcat(builtString, "v");
+            strncat(builtString, "v", 1);
             break;
         case 'w':
-            strcat(builtString, "w");
+            strncat(builtString, "w", 1);
             break;
         case 'x':
-            strcat(builtString, "x");
+            strncat(builtString, "x", 1);
             break;
         case 'y':
-            strcat(builtString, "y");
+            strncat(builtString, "y", 1);
             break;
         case 'z':
-            strcat(builtString, "z");
+            strncat(builtString, "z", 1);
             break;
         case ' ':
-            compare_to_keyword(builtString);
+            printf("%s", compare_to_keyword(builtString));
+            break;
+        case ',':
+            printf("%s", compare_to_keyword(builtString));
+            break;
+        case '(':
+            printf("%s", compare_to_keyword(builtString));
+            break;
+        case ')':
+            printf("%s", compare_to_keyword(builtString));
+            break;
+        case '\n':
+            printf("%s", compare_to_keyword(builtString));
         default:
             break;
     }

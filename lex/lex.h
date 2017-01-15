@@ -7,26 +7,30 @@
  *
  */
 #include <stdio.h>
+#include <string.h>
 /*REGION BEGIN: Variables and Data Structures */
 
-char* builtString;
+char builtString[128];
 //Linked List Declaration for ID
-typedef struct lexum {
-    char* lexumValue;
+typedef struct lexum
+{
+    char *lexumValue;
     struct lexum *next;
 } lexum_t;
 
 //Linked List Declaration for Type
-typedef struct type{
-    char* typeValue;
+typedef struct type
+{
+    char *typeValue;
     struct type *next;
 } type_t;
 
 //Linked List Declaration for Scope
-typedef struct scope{
+typedef struct scope
+{
     int scopeValue;
     struct scope *next;
-} scope_t;
+} scope_t; 
 
 /*REGION END: Variables and Data Structures */
 

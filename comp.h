@@ -8,13 +8,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-
 /* REGION BEGIN: General integer constants */
 //Exit codes for the compiler
 #define COMP_SUCCESS 0
 #define INVALID_ARGS 1
-
 
 //Constant values
 #define CORRECT_ARGS 2
