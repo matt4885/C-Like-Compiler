@@ -42,6 +42,16 @@ char* compare_to_keyword(char *builtString)
         return"keyword: int\n"; 
     }
     else {
-        return "test\n";
+        char *tempStr = malloc(sizeof(builtString));
+        strcat(tempStr, builtString);
+
+        if ((strlen(tempStr) == 2) && (strcmp(tempStr, "") == 0))
+            return tempStr;
+        else
+            strcat(tempStr, "id: ");
+
+        strcat(tempStr, "\n");
+        memset(&builtString[0], 0, sizeof(builtString));
+        return tempStr;
     }
 }

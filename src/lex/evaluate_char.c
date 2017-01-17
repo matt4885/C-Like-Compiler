@@ -10,7 +10,6 @@
 
 void evaluate_char(char currentChar)
 {
-    char* output;
     switch (currentChar)
     {
         case 'a':
