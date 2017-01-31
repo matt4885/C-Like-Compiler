@@ -3,6 +3,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/* This probably needs to be refactored and cleaned up. 
+   I am consider hashing the string values and then using a switch
+   against the integer. This will mean all keywords are now a constant
+   hash integer value, and reduce the verbosity when dealing with keywords.
+*/
+
 char* compare_to_keyword(char *builtString)
 {
     if (strncmp(builtString, "if", 2) == 0) { 
