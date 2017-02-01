@@ -1,6 +1,10 @@
 #ignore .gch files from compiled header files
 .gch
-#ignore .swp files from files in memory from
+#ignore .swap files from files in memory from
 .swap
 #ignore .out files from builds
+.out
+#ignore .swp
+.swp
+#ignore .out binaries
 .out
