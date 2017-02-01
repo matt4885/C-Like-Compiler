@@ -46,7 +46,7 @@ void evaluate_char(char currentChar)
             strncat(builtString, "k", 1);
             break;
         case 'l':
-            strncat(builtString, "a", 1);
+            strncat(builtString, "l", 1);
             break;
         case 'm':
             strncat(builtString, "m", 1);
@@ -91,19 +91,39 @@ void evaluate_char(char currentChar)
             strncat(builtString, "z", 1);
             break;
         case ' ':
-            printf("%s", compare_to_keyword(builtString));
+            strncat(builtString, " ", 1);
+            printf("%s\n", compare_to_keyword(builtString));
+            memset(&builtString[0], 0, sizeof(builtString));
             break;
         case ',':
-            printf("%s", compare_to_keyword(builtString));
+            strncat(builtString, ",", 1);
+            printf("%s\n", compare_to_keyword(builtString));
+            memset(&builtString[0], 0, sizeof(builtString));
             break;
         case '(':
-            printf("%s", compare_to_keyword(builtString));
+            strncat(builtString, "(", 1);
+            printf("%s\n", compare_to_keyword(builtString));
+            memset(&builtString[0], 0, sizeof(builtString));
             break;
         case ')':
+            strncat(builtString, ")", 1);
             printf("%s", compare_to_keyword(builtString));
+            memset(&builtString[0], 0, sizeof(builtString));
+            break;
+        case '{':
+            strncat(builtString, "{", 1);
+            printf("%s", compare_to_keyword(builtString));
+            memset(&builtString[0], 0, sizeof(builtString));
+            break;
+        case '}':
+            strncat(builtString, "}", 1);
+            printf("%s", compare_to_keyword(builtString));
+            memset(&builtString[0], 0, sizeof(builtString));
             break;
         case '\n':
+            strncat(builtString, "\n", 1);
             printf("%s", compare_to_keyword(builtString));
+            memset(&builtString[0], 0, sizeof(builtString));
         default:
             break;
     }
