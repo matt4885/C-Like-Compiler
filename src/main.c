@@ -1,7 +1,8 @@
 #include "lex/lex.h"
 #include "comp.h"
 
-int main(int argc, char **argv)
+int
+main(int argc, char **argv)
 {
     //Ensure that a command line argument is passed
     if (argc != CORRECT_ARGS)
@@ -14,5 +15,4 @@ int main(int argc, char **argv)
     start_compile(argv[1]);
 
     return COMP_SUCCESS;
-
 }
