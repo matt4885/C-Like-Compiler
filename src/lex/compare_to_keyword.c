@@ -44,12 +44,16 @@ char* compare_to_keyword(char *builtString)
         return "keyword: char"; 
     }
     else {
-        char *returnString = malloc(strlen("id: ") + strlen(builtString) + 1);
-        
-        returnString[0] = '\0';
-        strcat(returnString, "id: ");
-        strcat(returnString, builtString);
 
-        return returnString;
+        if (strlen(builtString) > 1) 
+        {
+            char *returnString = malloc(strlen("id: ") + strlen(builtString) + 1);
+            returnString[0] = '\0';
+            strcat(returnString, "id: ");
+            strcat(returnString, builtString);
+            return returnString;
+        }
+        
+        return "";
     }
 }
