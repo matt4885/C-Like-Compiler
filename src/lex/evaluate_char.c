@@ -11,19 +11,22 @@
 void evaluate_char(char currentChar)
 {
     //space
-    if (currentChar == 32)
+    if (currentChar == 32 || currentChar == '\t')
     {
-        strncat(builtString, " ", 1);
+        //strncat(builtString, " ", 1);
         printf("%s\n", compare_to_keyword(builtString));
         memset(&builtString[0], 0, sizeof(builtString));
         return;
     }
 
     //!/W
-    else if (currentchar >= 33 && currentChar <= 64)
+    else if ((currentChar >= 33 && currentChar <= 64) || (currentChar == 123 || currentChar == 125))
     {
-        strncat(builtString, ",", 1);
-        printf("%s\n", compare_to_keyword(builtString));
+
+        //strncat(builtString, &currentChar, 1);
+        if (strlen(builtString) > 1)
+            printf("%s\n", compare_to_keyword(builtString));
+        printf("%c\n", currentChar);
         memset(&builtString[0], 0, sizeof(builtString));
         return;
     }
@@ -31,7 +34,7 @@ void evaluate_char(char currentChar)
     //A-Za-z
     else if (currentChar >= 65 && currentChar <= 122)
     {
-        strncat(builtString, "a", 1);
+        strncat(builtString, &currentChar, 1);
         return;
     }
     return;

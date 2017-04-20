@@ -29,28 +29,27 @@ char* compare_to_keyword(char *builtString)
     }
     else if  (strncmp(builtString, "double", 6) == 0) { 
         memset(&builtString[0], 0, sizeof(builtString));
-        return "keyword: int"; 
+        return "keyword: double"; 
     }
     else if  (strncmp(builtString, "float", 5) == 0) { 
         memset(&builtString[0], 0, sizeof(builtString));
-        return "keyword: int"; 
+        return "keyword: float"; 
     }
     else if  (strncmp(builtString, "string", 6) == 0) { 
         memset(&builtString[0], 0, sizeof(builtString));
-        return "keyword: int"; 
-    }
-    else if  (strncmp(builtString, "int", 3) == 0) { 
-        memset(&builtString[0], 0, sizeof(builtString));
-        return "keyword: int"; 
+        return "keyword: string"; 
     }
     else if  (strncmp(builtString, "char", 3) == 0) { 
         memset(&builtString[0], 0, sizeof(builtString));
-        return"keyword: int"; 
+        return "keyword: char"; 
     }
     else {
+        char *returnString = malloc(strlen("id: ") + strlen(builtString) + 1);
+        
+        returnString[0] = '\0';
+        strcat(returnString, "id: ");
+        strcat(returnString, builtString);
 
-  //      if (strlen(builtString) > 1)
- //           return strcat("id: ", builtString);
-        return builtString;
+        return returnString;
     }
 }
