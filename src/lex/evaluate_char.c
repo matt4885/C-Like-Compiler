@@ -1,5 +1,5 @@
 /* evaluate_char.c
- * --version: 0.01
+ * 
  * --author: matthew kempey
  * --summary: compares the current char to [a-z] or set of delimiters
  *
@@ -11,7 +11,7 @@
 void evaluate_char(char currentChar)
 {
     //Add letter to current lexem string
-    if (currentChar > 'A' && currentChar < 'z')
+    if (currentChar >= 'A' && currentChar <= 'z')
     {
         strncat(builtString, &currentChar, 1);
         return;

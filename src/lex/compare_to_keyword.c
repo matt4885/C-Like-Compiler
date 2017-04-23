@@ -11,39 +11,48 @@
 
 char* compare_to_keyword(char *builtString)
 {
-    if (strncmp(builtString, "if", 2) == 0) { 
+    if (strncmp(builtString, "if", 2) == 0) 
+    { 
         memset(&builtString[0], 0, sizeof(builtString));
         return "keyword: if\n";
     }
-    else if  (strncmp(builtString, "else", 4) == 0) { 
+    else if  (strncmp(builtString, "else", 4) == 0)
+    { 
         memset(&builtString[0], 0, sizeof(builtString));
         return "keyword: else\n"; 
     }
-    else if  (strncmp(builtString, "return", 6) == 0) {
+    else if  (strncmp(builtString, "return", 6) == 0)
+    {
          memset(&builtString[0], 0, sizeof(builtString));
          return "keyword: return\n"; 
     }
-    else if  (strncmp(builtString, "int", 3) == 0) { 
+    else if  (strncmp(builtString, "int", 3) == 0) 
+    { 
         memset(&builtString[0], 0, sizeof(builtString));
         return "keyword: int\n";
     }
-    else if  (strncmp(builtString, "double", 6) == 0) { 
+    else if  (strncmp(builtString, "double", 6) == 0) 
+    { 
         memset(&builtString[0], 0, sizeof(builtString));
         return "keyword: double\n"; 
     }
-    else if  (strncmp(builtString, "float", 5) == 0) { 
+    else if  (strncmp(builtString, "float", 5) == 0) 
+    { 
         memset(&builtString[0], 0, sizeof(builtString));
         return "keyword: float\n"; 
     }
-    else if  (strncmp(builtString, "string", 6) == 0) { 
+    else if  (strncmp(builtString, "string", 6) == 0) 
+    { 
         memset(&builtString[0], 0, sizeof(builtString));
         return "keyword: string\n"; 
     }
-    else if  (strncmp(builtString, "char", 3) == 0) { 
+    else if  (strncmp(builtString, "char", 3) == 0) 
+    { 
         memset(&builtString[0], 0, sizeof(builtString));
         return "keyword: char\n"; 
     }
-    else {
+    else 
+    {
 
         if (strlen(builtString) >= 1) 
         {
@@ -55,6 +64,6 @@ char* compare_to_keyword(char *builtString)
             return returnString;
         }
         
-        return "";
     }
+        return "";
 }

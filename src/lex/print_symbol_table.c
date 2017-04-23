@@ -45,7 +45,6 @@ void print_symbol_table(lexum_t *lexumHead, type_t *typeHead, scope_t *scopeHead
         current_lexum = current_lexum->next;
         current_type  = current_type->next;
         current_scope = current_scope->next;
-        
 
     } //end while
 
