@@ -12,7 +12,7 @@
 char* compare_to_keyword(char *builtString)
 {
     if (strncmp(builtString, "if", 2) == 0) 
-    { 
+    {
         memset(&builtString[0], 0, sizeof(builtString));
         return "keyword: if\n";
     }

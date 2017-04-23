@@ -7,10 +7,11 @@
 
 #include "lex.h"
 #include <string.h>
-#include <stdio.h>
 #include <stdlib.h>
+
 void start_lexical_analysis(FILE *fp)
 {
+    
     char line[128];
 
     //Read until the end of the file
@@ -18,6 +19,8 @@ void start_lexical_analysis(FILE *fp)
     {
         inspect_line(line);
     }
+
+    print_symbol_table(&lexum, &type, &scope);
 
     return;
 

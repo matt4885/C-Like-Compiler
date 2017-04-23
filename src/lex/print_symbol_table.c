@@ -23,10 +23,11 @@ void print_symbol_table(lexum_t *lexumHead, type_t *typeHead, scope_t *scopeHead
 
 
     //Print format of symbol table
+    printf("\n");
     puts("Lexical Analyzer Symbol Table");
-    puts("----------------------------------");
-    puts("ID               |Type    |Scope  ");
-    puts("----------------------------------");
+    puts("------------------------------");
+    puts("ID             |Type    |Scope");
+    puts("------------------------------");
 
 
     //Iterate through list of lexums..only need to check one list 
@@ -35,12 +36,10 @@ void print_symbol_table(lexum_t *lexumHead, type_t *typeHead, scope_t *scopeHead
     while (current_lexum != NULL)
     {
         //Print values
-        printf("[");
         printf("%s\t\t", current_lexum->lexumValue);
-        printf("%s\t\t", current_type->typeValue);
-        printf("%d", current_scope->scopeValue);
+        printf("%s\t ", current_type->typeValue);
+        printf("%d\n", current_scope->scopeValue);
 
-        printf("]\n");
         //Iterate to next node in each list
         current_lexum = current_lexum->next;
         current_type  = current_type->next;

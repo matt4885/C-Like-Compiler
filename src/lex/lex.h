@@ -8,9 +8,15 @@
  */
 #include <stdio.h>
 #include <string.h>
+
 /*REGION BEGIN: Variables and Data Structures */
 
+//builtString (current lexum being built)[]
 char builtString[128];
+char builtNumber[128];
+
+
+
 //Linked List Declaration for ID
 typedef struct lexum
 {
@@ -32,6 +38,10 @@ typedef struct scope
     struct scope *next;
 } scope_t; 
 
+lexum_t lexum;
+type_t type;
+scope_t scope;
+
 /*REGION END: Variables and Data Structures */
 
 /* REGION BEGIN: Lexical Analyzer Functions */
@@ -47,5 +57,6 @@ char* compare_to_keyword();
 void print_symbol_table(lexum_t *lexumHead,
                         type_t *typeHead, scope_t *scopeHead);
 
+void add_symbol(char *symbol);
 /* REGION END: Lexical Analyzer Functions */
 

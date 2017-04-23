@@ -20,12 +20,16 @@ void evaluate_char(char currentChar)
     //Not a letter? We have reached a delimiting character, so we print the string 
     printf("%s", compare_to_keyword(builtString));
 
+    if (currentChar >= '0' && currentChar <= '9')
+
+
     //Print the current delimiter
     if (currentChar > 32)
     {
         printf("%c\n", currentChar);
     }
     
+
     //Empty the lexem string 
     memset(&builtString[0], 0, sizeof(builtString));
     return;
