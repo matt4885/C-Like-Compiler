@@ -21,7 +21,9 @@ void evaluate_char(char currentChar)
     printf("%s", compare_to_keyword(builtString));
 
     if (currentChar >= '0' && currentChar <= '9')
+    {
 
+    }
 
     //Print the current delimiter
     if (currentChar > 32)
@@ -31,6 +33,6 @@ void evaluate_char(char currentChar)
     
 
     //Empty the lexem string 
-    memset(&builtString[0], 0, sizeof(builtString));
+    builtString[0] = '\0';
     return;
 }
