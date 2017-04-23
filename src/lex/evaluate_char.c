@@ -6,7 +6,6 @@
  */
 
 #include "lex.h"
-#include <string.h>
 
 void evaluate_char(char currentChar)
 {

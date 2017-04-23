@@ -1,7 +1,5 @@
 #include "lex.h"
-#include <string.h>
 #include <stdlib.h>
-#include <stdio.h>
 
 /* This probably needs to be refactored and cleaned up. 
    I am consider hashing the string values and then using a switch
@@ -53,7 +51,6 @@ char* compare_to_keyword(char *builtString)
     }
     else 
     {
-
         if (strlen(builtString) >= 1) 
         {
             char *returnString = malloc(strlen("id: ") + strlen(builtString) + 2);
@@ -62,8 +59,7 @@ char* compare_to_keyword(char *builtString)
             strcat(returnString, builtString);
             strcat(returnString, "\n");
             return returnString;
-        }
-        
+        }   
     }
-        return "";
+    return "";
 }

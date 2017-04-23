@@ -6,8 +6,6 @@
  */
 
 #include "lex.h"
-#include <string.h>
-#include <stdlib.h>
 
 void start_lexical_analysis(FILE *fp)
 {

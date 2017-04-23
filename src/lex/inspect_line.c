@@ -8,7 +8,6 @@
  */
 
 #include "lex.h"
-#include <string.h>
 
 void inspect_line(char line[])
 {
