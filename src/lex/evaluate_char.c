@@ -11,7 +11,7 @@
 void evaluate_char(char currentChar)
 {
     //Add letter to current lexem string
-    if (currentChar > 64 && currentChar < 123)
+    if (currentChar > 'A' && currentChar < 'z')
     {
         strncat(builtString, &currentChar, 1);
         return;

@@ -1,5 +1,5 @@
 /* inspect_line.c
- * --version: 0.01
+ * 
  * --author: matthew kempey
  * --summary: inspects a line passed in from the file pointer and prints
  * the output, and begins the switch to start comparing characters

@@ -2,7 +2,7 @@
  * Header file for lexical analysis
  * Contains functions and other variables
  *
- * --version: 0.01
+ * 
  * --author: matthew kempey
  *
  */

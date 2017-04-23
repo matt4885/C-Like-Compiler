@@ -1,6 +1,6 @@
 /* print_symbol_table
  *
- * --version 0.01
+ * 
  * --author matthew kempey
  *
  * <param name="id_t *idHead" meaning="id Linked List head">
@@ -25,7 +25,7 @@ void print_symbol_table(lexum_t *lexumHead, type_t *typeHead, scope_t *scopeHead
     //Print format of symbol table
     puts("Lexical Analyzer Symbol Table");
     puts("----------------------------------");
-    puts("ID               |Type    | Scope ");
+    puts("ID               |Type    |Scope  ");
     puts("----------------------------------");
 
 

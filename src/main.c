@@ -12,6 +12,7 @@ main(int argc, char **argv)
     }
     //Open file for reading
     
+    //Begin compilation process
     start_compile(argv[1]);
 
     return COMP_SUCCESS;
