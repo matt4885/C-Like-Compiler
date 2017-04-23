@@ -10,33 +10,23 @@
 
 void evaluate_char(char currentChar)
 {
-    //space
-    // if (currentChar == 32 || currentChar == '\t')
-    // {
-    //     //strncat(builtString, " ", 1);
-    //     printf("%s\n", compare_to_keyword(builtString));
-    //     memset(&builtString[0], 0, sizeof(builtString));
-    //     return;
-    // }
-
-    //!/W
-    if ((currentChar >= 32 && currentChar <= 64)   ||
-       (currentChar == 123 || currentChar == 125))
-    {
-
-        //strncat(builtString, &currentChar, 1);
-        //if (strlen(builtString) > 1)
-        printf("%s\n", compare_to_keyword(builtString));
-        printf("%c\n", currentChar);
-        memset(&builtString[0], 0, sizeof(builtString));
-        return;
-    }
-
-    //A-Za-z
-    else if (currentChar >= 65 && currentChar <= 122)
+    //Add letter to current lexem string
+    if (currentChar > 64 && currentChar < 123)
     {
         strncat(builtString, &currentChar, 1);
         return;
     }
+
+    //Not a letter? We have reached a delimiting character, so we print the string 
+    printf("%s", compare_to_keyword(builtString));
+
+    //Print the current delimiter
+    if (currentChar > 32)
+    {
+        printf("%c\n", currentChar);
+    }
+    
+    //Empty the lexem string 
+    memset(&builtString[0], 0, sizeof(builtString));
     return;
 }
