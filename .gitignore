@@ -8,3 +8,7 @@
 .swp
 #ignore .out binaries
 .out
+
+*.out
+
+*.s
