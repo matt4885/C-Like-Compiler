@@ -9,7 +9,6 @@ int main(int argc, char **argv)
         puts("Invalid argument count. Exiting...");
         exit(INVALID_ARGS);
     }
-    //Open file for reading
     
     //Begin compilation process
     start_compile(argv[1]);
